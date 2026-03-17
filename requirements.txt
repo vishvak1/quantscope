@@ -1,0 +1,13 @@
+transformers>=4.45.0
+optimum[onnxruntime]>=1.23.0
+onnxruntime>=1.20.0
+torch
+datasets
+scikit-learn
+pandas
+numpy
+scipy
+seaborn
+matplotlib
+jupyter
+pyyaml

@@ -1,0 +1,37 @@
+# QuantScope configuration
+# Fill in paths to your models, dataset, and model sizes before running.
+
+models:
+  # Define one or more variants. Supported types: pytorch, onnx.
+  # You must have at least two variants to compute disagreements.
+  full:
+    type: pytorch
+    path: path/to/your/pytorch/model # directory with model.safetensors + config.json + tokenizer
+
+  onnx_fp32:
+    type: onnx
+    path: path/to/your/onnx/model/dir # directory containing the .onnx file
+    file: model.onnx
+    tokenizer_path: path/to/your/tokenizer # can be the same as the pytorch model dir
+
+  onnx_int8:
+    type: onnx
+    path: path/to/your/onnx/model/dir
+    file: model_int8.onnx
+    tokenizer_path: path/to/your/tokenizer
+
+dataset:
+  path: path/to/your/hf/dataset # HuggingFace Arrow dataset directory
+  split: test # which split to evaluate on
+  text_column: text # name of the input text column
+  label_column: label # name of the binary label column (0/1)
+
+# Model sizes in MB — used by Notebook 06 (Optimisation Ladder).
+# Check the file size of model.safetensors and each .onnx file on disk.
+model_sizes_mb:
+  full: 433.3
+  onnx_fp32: 433.5
+  onnx_int8: 109.1
+
+results:
+  output_dir: results/
