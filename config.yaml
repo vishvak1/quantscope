@@ -27,7 +27,7 @@ dataset:
   label_column: label # name of the binary label column (0/1)
 
 # Model sizes in MB — used by Notebook 06 (Optimisation Ladder).
-# Check the file size of model.safetensors and each .onnx file on disk.
+# Check the file size of .onnx files on disk.
 # Below are placeholder values -- please fill in the actual values.
 model_sizes_mb:
   full: 433.3
