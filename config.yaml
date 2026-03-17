@@ -28,6 +28,7 @@ dataset:
 
 # Model sizes in MB — used by Notebook 06 (Optimisation Ladder).
 # Check the file size of model.safetensors and each .onnx file on disk.
+# Below are placeholder values -- please fill in the actual values.
 model_sizes_mb:
   full: 433.3
   onnx_fp32: 433.5
